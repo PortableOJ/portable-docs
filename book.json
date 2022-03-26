@@ -1,0 +1,17 @@
+{
+    "output": "docs",
+    "title": "Portable Online Judge manual",
+    "description": "The manual of Portable Online Judge",
+    "links": {
+        "sidebar": {
+            "GitHub": "http://github.com/PortableOJ"
+        },
+        "sharing": {
+            "google": false,
+            "facebook": false,
+            "twitter": false,
+            "weibo": false,
+            "all": null
+        }
+    }
+}

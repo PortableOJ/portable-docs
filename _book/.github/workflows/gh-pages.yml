@@ -1,0 +1,33 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: GitHub Pages deploy
+
+on:
+  push:
+    branches: [ master ]
+#  pull_request:
+#    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 10
+          cache: 'npm'
+      - name: install gitbook
+        run: npm i gitbook -g
+
+      - name: gitbook build
+        run: gitbook build . _book
+
+      - name: new branch
+        run: git checkout --orphan gh-pages
+
+      - name: 
