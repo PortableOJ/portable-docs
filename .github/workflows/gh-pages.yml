@@ -1,13 +1,9 @@
-# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
-
-name: GitHub Pages deploy
+name: 'Gitbook Action Build'
 
 on:
   push:
-    branches: [ master ]
-#  pull_request:
-#    branches: [ master ]
+    branches:
+      - master  # trigger branch
 
 jobs:
   build:
@@ -15,34 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 10
-      - name: install gitbook
-        run: npm i gitbook-cli -g
-
-      - name: gitbook build
-        run: gitbook build . _book
-
-      - name: new branch
-        run: git checkout --orphan gh-pages
-
-      - name: delete other file
-        run: find $PWD -type f | grep -v .git/ | grep -v _book | xargs rm
-
-      - name: mv build file
-        run: mv _book/* .
-
-      - name: Commit files
-        run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -m "Add changes" -a
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          force: true
-          branch: gh-pages
+    - name: Checkout action
+      uses: actions/checkout@v2
+    - name: Gitbook Action           # https://github.com/ZanderZhao/gitbook-action/releases
+      uses: ZanderZhao/gitbook-action@v1.2.4  # -> or ZanderZhao/gitbook-action@master.  If not use master click above, use latest please
+      with:                                   #    or fork this repo and use YourName/gitbook-action@master
+        token: ${{ secrets.GITHUB_TOKEN }}  # -> remember add this in settings/secrets as following
