@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 10
       - name: install gitbook
-        run: npm i gitbook -g
+        run: npm i gitbook-cli -g
 
       - name: gitbook build
         run: gitbook build . _book
@@ -30,7 +30,7 @@ jobs:
         run: git checkout --orphan gh-pages
 
       - name: delete other file
-        run: find $PWD -type f | grep -v .git | grep -v _book | xargs rm
+        run: find $PWD -type f | grep -v .git/ | grep -v _book | xargs rm
 
       - name: mv build file
         run: mv _book/* .
