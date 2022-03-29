@@ -28,7 +28,7 @@
     ],
     "pluginsConfig": {
         "insert-logo": {
-            "url": "/img/favicon.png",
+            "url": "https://github.com/PortableOJ/portable-docs/blob/master/img/favicon.png?raw=true",
             "style": "background: none; max-height: 100px; min-height: 30px"
         },
         "favicon": {
