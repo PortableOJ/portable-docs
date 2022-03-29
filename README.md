@@ -2,7 +2,7 @@
    <img src="https://github.com/PortableOJ/portable-docs/blob/master/img/favicon.png?raw=true" alt="MEVCL"/>
    <br>
    <h1>Portable Online Judge</h1>
-   <p>Portable OJ 是一个高性能、分布式、易部署的开源 Online Judge 系统</p>
+   <p>一个高性能、分布式、易部署的开源 Online Judge 系统</p>
 </div>
 
 # 什么是 Online Judge
