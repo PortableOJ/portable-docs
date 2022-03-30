@@ -27,9 +27,13 @@ sudo chmod +x start.sh
 下面是几个选项的简要介绍
 
 > (re)Start a Server with a Judge. 在本机上(重新)启动完整的数据库服务和 server 服务，并启动一个本地的判题系统
+>
 > (re)Start a Server without Judge. 在本机上(重新)启动完整的数据库服务和 server 服务，但是不启动本地判题系统
+>
 > (re)Start a remote Judge. 在本机上(重新)启动一个判题系统
+>
 > Update deploy shell and restart. 更新部署脚本并重新回到此页面
+>
 > Do nothing and quit. 什么也不做并退出
 
 如果你需要修改配置信息，此时选择 Do nothing and quit，之后请阅读本章的修改配置文件部分内容
