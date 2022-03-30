@@ -32,8 +32,11 @@ sudo chmod +x start.sh
 > Update deploy shell and restart. 更新部署脚本并重新回到此页面
 > Do nothing and quit. 什么也不做并退出
 
+如果你需要修改配置信息，此时选择 Do nothing and quit，之后请阅读本章的修改配置文件部分内容
+
+若你不需要修改配置文件，则选择一个你需要的选项继续即可。请注意等待，启动后可能需要约 1 分钟左右的时间
+
 ## 修改配置文件
 
-你可以在当前目录下的 `setup-env.sh` 文件内找到默认配置信息，但<span style="color:red">请不要随意随意修改此文件内的任何配置信息</span>，如果你希望更新其中的配置信息，请继续阅读本文档。
+你可以在当前目录下的 `setup-env.sh` 文件内找到默认配置信息，但<span style="color:red">请不要随意随意修改此文件内的任何配置信息</span>，如果你希望更新其中的配置信息，请修改 .env 文件内的配置信息，这两个文件通常是完全相同的，`setup-env.sh` 仅用于保存默认配置信息
 
-#
